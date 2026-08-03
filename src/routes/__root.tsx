@@ -81,7 +81,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         name: "description",
         content:
-          "Khat Kooks offers premium catering services and authentic South African cuisine for weddings, corporate events, private functions and celebrations.",
+          "Khat Kooks offers premium catering and authentic South African cuisine for weddings, corporate events and private functions. Request a personalised quote today.",
       },
       { name: "author", content: "Lisa Khatshiwe" },
       {
@@ -92,6 +92,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:site_name", content: "Khat Kooks" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { property: "og:title", content: "Khat Kooks | Premium Catering & Authentic African Cuisine" },
+      { name: "twitter:title", content: "Khat Kooks | Premium Catering & Authentic African Cuisine" },
+      { property: "og:description", content: "Khat Kooks offers premium catering and authentic South African cuisine for weddings, corporate events and private functions. Request a personalised quote today." },
+      { name: "twitter:description", content: "Khat Kooks offers premium catering and authentic South African cuisine for weddings, corporate events and private functions. Request a personalised quote today." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/fe199a30-747f-44f6-a651-d646b70e9308/id-preview-c0fb6807--07182cc8-8693-4af4-bdaf-41faacac0775.lovable.app-1785765355077.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/fe199a30-747f-44f6-a651-d646b70e9308/id-preview-c0fb6807--07182cc8-8693-4af4-bdaf-41faacac0775.lovable.app-1785765355077.png" },
     ],
     links: [
       {

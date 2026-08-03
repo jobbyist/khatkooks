@@ -48,7 +48,7 @@ export const Route = createFileRoute("/")({
       {
         property: "og:description",
         content:
-          "Premium catering and authentic South African cuisine by Lisa Khatshiwe. Weddings, corporate events, traditional celebrations and private chef experiences.",
+          "Khat Kooks offers premium catering and authentic South African cuisine for weddings, corporate events and private functions. Request a personalised quote today.",
       },
       { property: "og:type", content: "website" },
     ],
