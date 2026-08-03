@@ -80,8 +80,8 @@ function QuotePage() {
       if (!String(data.get(k) ?? "").trim()) next[k] = "Required";
     });
     const email = String(data.get("email") ?? "");
-    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next.email = "Enter a valid email";
-    if (!data.get("consent")) next.consent = "Please confirm";
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next["email"] = "Enter a valid email";
+    if (!data.get("consent")) next["consent"] = "Please confirm";
     setErrors(next);
     if (Object.keys(next).length === 0) {
       setSubmitted(true);
@@ -151,7 +151,7 @@ function QuotePage() {
                     <div>
                       <Label htmlFor="name">Name</Label>
                       <input id="name" name="name" className={fieldClass} placeholder="Lisa" />
-                      {errors.name && <p className="mt-1.5 text-xs text-destructive">{errors.name}</p>}
+                      {errors["name"] && <p className="mt-1.5 text-xs text-destructive">{errors["name"]}</p>}
                     </div>
                     <div>
                       <Label htmlFor="surname">Surname</Label>
@@ -161,8 +161,8 @@ function QuotePage() {
                         className={fieldClass}
                         placeholder="Khatshiwe"
                       />
-                      {errors.surname && (
-                        <p className="mt-1.5 text-xs text-destructive">{errors.surname}</p>
+                      {errors["surname"] && (
+                        <p className="mt-1.5 text-xs text-destructive">{errors["surname"]}</p>
                       )}
                     </div>
                     <div>
@@ -174,8 +174,8 @@ function QuotePage() {
                         className={fieldClass}
                         placeholder="you@email.com"
                       />
-                      {errors.email && (
-                        <p className="mt-1.5 text-xs text-destructive">{errors.email}</p>
+                      {errors["email"] && (
+                        <p className="mt-1.5 text-xs text-destructive">{errors["email"]}</p>
                       )}
                     </div>
                     <div>
@@ -187,8 +187,8 @@ function QuotePage() {
                         className={fieldClass}
                         placeholder="+27 82 000 0000"
                       />
-                      {errors.phone && (
-                        <p className="mt-1.5 text-xs text-destructive">{errors.phone}</p>
+                      {errors["phone"] && (
+                        <p className="mt-1.5 text-xs text-destructive">{errors["phone"]}</p>
                       )}
                     </div>
                     <div>
@@ -201,15 +201,15 @@ function QuotePage() {
                           <option key={t}>{t}</option>
                         ))}
                       </select>
-                      {errors.eventType && (
-                        <p className="mt-1.5 text-xs text-destructive">{errors.eventType}</p>
+                      {errors["eventType"] && (
+                        <p className="mt-1.5 text-xs text-destructive">{errors["eventType"]}</p>
                       )}
                     </div>
                     <div>
                       <Label htmlFor="eventDate">Event Date</Label>
                       <input id="eventDate" name="eventDate" type="date" className={fieldClass} />
-                      {errors.eventDate && (
-                        <p className="mt-1.5 text-xs text-destructive">{errors.eventDate}</p>
+                      {errors["eventDate"] && (
+                        <p className="mt-1.5 text-xs text-destructive">{errors["eventDate"]}</p>
                       )}
                     </div>
                     <div>
@@ -231,8 +231,8 @@ function QuotePage() {
                         className={fieldClass}
                         placeholder="80"
                       />
-                      {errors.guests && (
-                        <p className="mt-1.5 text-xs text-destructive">{errors.guests}</p>
+                      {errors["guests"] && (
+                        <p className="mt-1.5 text-xs text-destructive">{errors["guests"]}</p>
                       )}
                     </div>
                     <div className="sm:col-span-2">
@@ -328,7 +328,7 @@ function QuotePage() {
                     />
                     <span>I agree to be contacted regarding my enquiry.</span>
                   </label>
-                  {errors.consent && <p className="text-xs text-destructive">{errors.consent}</p>}
+                  {errors["consent"] && <p className="text-xs text-destructive">{errors["consent"]}</p>}
 
                   <button
                     type="submit"
