@@ -99,7 +99,16 @@ export function Nav() {
       {open && (
         <div className="glass-panel mt-3 border-t border-border/60 px-5 pb-6 pt-4 lg:hidden">
           <ul className="flex flex-col gap-1">
-            {[{ label: "Home", hash: undefined }, ...sectionLinks].map((l) => (
+            <li>
+              <Link
+                to="/"
+                onClick={() => setOpen(false)}
+                className="block rounded-xl px-3 py-3 font-display text-xl text-foreground transition-colors hover:bg-secondary"
+              >
+                Home
+              </Link>
+            </li>
+            {sectionLinks.map((l) => (
               <li key={l.label}>
                 <Link
                   to="/"
@@ -111,6 +120,7 @@ export function Nav() {
                 </Link>
               </li>
             ))}
+
             <li>
               <Link
                 to="/contact"
