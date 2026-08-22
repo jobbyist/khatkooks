@@ -117,15 +117,16 @@ const dishes = [
 ];
 
 const gallery = [
-  { src: galleryBuffet, cat: "Buffets", tall: true },
-  { src: galleryCorporate, cat: "Corporate", tall: false },
-  { src: dishGrill, cat: "Traditional Events", tall: true },
-  { src: galleryKitchen, cat: "Kitchen Moments", tall: false },
-  { src: dishPap, cat: "Plated Meals", tall: true },
-  { src: dishDessert, cat: "Desserts", tall: false },
-  { src: dishSamp, cat: "Food Styling", tall: false },
-  { src: dishBeef, cat: "Private Dining", tall: true },
+  { src: poolsideAsset.url, cat: "Poolside Buffets", tall: true },
+  { src: kitchenSpreadAsset.url, cat: "Kitchen Moments", tall: false },
+  { src: braaiAsset.url, cat: "Grill & Braai", tall: true },
+  { src: sundayLunchAsset.url, cat: "Sunday Lunch", tall: false },
+  { src: salmonPlatedAsset.url, cat: "Plated Meals", tall: true },
+  { src: salmonCitrusAsset.url, cat: "Starters", tall: false },
+  { src: waffleAsset.url, cat: "Food Styling", tall: false },
+  { src: hotdogsAsset.url, cat: "Street Food", tall: true },
 ];
+
 
 const testimonials = [
   {
