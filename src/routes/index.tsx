@@ -21,16 +21,24 @@ import {
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal } from "@/components/site/Reveal";
 
-import hero from "@/assets/hero.jpg";
-import lisa from "@/assets/lisa.jpg";
+import heroVideoAsset from "@/assets/hero-video.mp4.asset.json";
+import heroPosterAsset from "@/assets/hero-poster.jpg.asset.json";
+import founderAsset from "@/assets/founder-lisa.jpg.asset.json";
+import hotdogsAsset from "@/assets/gourmet-hotdogs.jpg.asset.json";
+import salmonCitrusAsset from "@/assets/salmon-citrus.jpg.asset.json";
+import braaiAsset from "@/assets/braai-platter.jpg.asset.json";
+import poolsideAsset from "@/assets/poolside-buffet.jpg.asset.json";
+import kitchenSpreadAsset from "@/assets/kitchen-spread.jpg.asset.json";
+import salmonPlatedAsset from "@/assets/salmon-plated.jpg.asset.json";
+import waffleAsset from "@/assets/chicken-waffles.jpg.asset.json";
+import sundayLunchAsset from "@/assets/sunday-lunch.jpg.asset.json";
 import dishPap from "@/assets/dish-pap.jpg";
 import dishBeef from "@/assets/dish-beef.jpg";
 import dishGrill from "@/assets/dish-grill.jpg";
 import dishSamp from "@/assets/dish-samp.jpg";
 import dishDessert from "@/assets/dish-dessert.jpg";
-import galleryBuffet from "@/assets/gallery-buffet.jpg";
-import galleryCorporate from "@/assets/gallery-corporate.jpg";
 import galleryKitchen from "@/assets/gallery-kitchen.jpg";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
