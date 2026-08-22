@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check, Upload } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal } from "@/components/site/Reveal";
+import {
+  FORMSPREE_ENDPOINT,
+  MIN_FILL_SECONDS,
+  checkRateLimit,
+  recordSubmission,
+} from "@/lib/forms";
 
 export const Route = createFileRoute("/quote")({
   head: () => ({
@@ -67,13 +73,22 @@ function Label({ children, htmlFor }: { children: React.ReactNode; htmlFor: stri
   );
 }
 
+function newMathChallenge() {
+  return { a: 2 + Math.floor(Math.random() * 8), b: 1 + Math.floor(Math.random() * 8) };
+}
+
 function QuotePage() {
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [sending, setSending] = useState(false);
+  const [formError, setFormError] = useState("");
+  const [math, setMath] = useState(newMathChallenge);
+  const mountedAt = useRef(Date.now());
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const data = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const data = new FormData(form);
     const next: Record<string, string> = {};
     const required = ["name", "surname", "email", "phone", "eventType", "eventDate", "guests"];
     required.forEach((k) => {
@@ -82,12 +97,64 @@ function QuotePage() {
     const email = String(data.get("email") ?? "");
     if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) next["email"] = "Enter a valid email";
     if (!data.get("consent")) next["consent"] = "Please confirm";
+    if (Number(String(data.get("mathAnswer") ?? "")) !== math.a + math.b) {
+      next["mathAnswer"] = "Incorrect answer";
+    }
     setErrors(next);
-    if (Object.keys(next).length === 0) {
+    setFormError("");
+    if (Object.keys(next).length > 0) return;
+
+    // Honeypot — bots fill hidden fields; silently pretend success.
+    if (String(data.get("company") ?? "").trim() !== "") {
+      setSubmitted(true);
+      return;
+    }
+
+    // Time trap — submissions faster than a human can type are rejected.
+    if (Date.now() - mountedAt.current < MIN_FILL_SECONDS * 1000) {
+      setFormError("That was a little too quick — please review your details and try again.");
+      setMath(newMathChallenge());
+      return;
+    }
+
+    const limit = checkRateLimit();
+    if (!limit.allowed) {
+      setFormError(
+        `You've sent several requests already. Please try again in about ${limit.retryInMinutes} minutes or email us directly.`,
+      );
+      return;
+    }
+
+    if (!FORMSPREE_ENDPOINT) {
+      setFormError(
+        "The form isn't connected yet. Please email info@khatkooks.food and we'll respond right away.",
+      );
+      return;
+    }
+
+    data.delete("company");
+    data.delete("mathAnswer");
+    data.append("_subject", "New catering quote request — Khat Kooks");
+
+    setSending(true);
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+      });
+      if (!res.ok) throw new Error("Request failed");
+      recordSubmission();
       setSubmitted(true);
       window.scrollTo({ top: 0, behavior: "smooth" });
+    } catch {
+      setFormError("We couldn't send your request. Please try again or email info@khatkooks.food.");
+      setMath(newMathChallenge());
+    } finally {
+      setSending(false);
     }
   };
+
 
   return (
     <SiteLayout>
@@ -320,6 +387,29 @@ function QuotePage() {
                     </select>
                   </div>
 
+                  {/* Honeypot — hidden from humans, catches bots */}
+                  <div aria-hidden className="absolute left-[-9999px] size-px overflow-hidden">
+                    <label htmlFor="company">Company (leave blank)</label>
+                    <input id="company" name="company" tabIndex={-1} autoComplete="off" />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="mathAnswer">
+                      Spam check — what is {math.a} + {math.b}?
+                    </Label>
+                    <input
+                      id="mathAnswer"
+                      name="mathAnswer"
+                      inputMode="numeric"
+                      autoComplete="off"
+                      className={fieldClass}
+                      placeholder="Your answer"
+                    />
+                    {errors["mathAnswer"] && (
+                      <p className="mt-1.5 text-xs text-destructive">{errors["mathAnswer"]}</p>
+                    )}
+                  </div>
+
                   <label className="flex items-start gap-3 text-sm text-muted-foreground">
                     <input
                       type="checkbox"
@@ -330,12 +420,20 @@ function QuotePage() {
                   </label>
                   {errors["consent"] && <p className="text-xs text-destructive">{errors["consent"]}</p>}
 
+                  {formError && (
+                    <p className="rounded-2xl bg-secondary px-4 py-3 text-xs text-destructive">
+                      {formError}
+                    </p>
+                  )}
+
                   <button
                     type="submit"
-                    className="flex w-full items-center justify-center gap-2 rounded-full gradient-warm px-8 py-5 text-sm font-semibold text-background shadow-lift transition-transform duration-300 hover:-translate-y-1"
+                    disabled={sending}
+                    className="flex w-full items-center justify-center gap-2 rounded-full gradient-warm px-8 py-5 text-sm font-semibold text-background shadow-lift transition-transform duration-300 hover:-translate-y-1 disabled:opacity-60"
                   >
-                    <Check className="size-4" /> Request My Quote
+                    <Check className="size-4" /> {sending ? "Sending…" : "Request My Quote"}
                   </button>
+
                 </form>
               </Reveal>
             </>

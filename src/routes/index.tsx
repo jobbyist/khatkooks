@@ -21,16 +21,24 @@ import {
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal } from "@/components/site/Reveal";
 
-import hero from "@/assets/hero.jpg";
-import lisa from "@/assets/lisa.jpg";
+import heroVideoAsset from "@/assets/hero-video.mp4.asset.json";
+import heroPosterAsset from "@/assets/hero-poster.jpg.asset.json";
+import founderAsset from "@/assets/founder-lisa.jpg.asset.json";
+import hotdogsAsset from "@/assets/gourmet-hotdogs.jpg.asset.json";
+import salmonCitrusAsset from "@/assets/salmon-citrus.jpg.asset.json";
+import braaiAsset from "@/assets/braai-platter.jpg.asset.json";
+import poolsideAsset from "@/assets/poolside-buffet.jpg.asset.json";
+import kitchenSpreadAsset from "@/assets/kitchen-spread.jpg.asset.json";
+import salmonPlatedAsset from "@/assets/salmon-plated.jpg.asset.json";
+import waffleAsset from "@/assets/chicken-waffles.jpg.asset.json";
+import sundayLunchAsset from "@/assets/sunday-lunch.jpg.asset.json";
 import dishPap from "@/assets/dish-pap.jpg";
 import dishBeef from "@/assets/dish-beef.jpg";
 import dishGrill from "@/assets/dish-grill.jpg";
 import dishSamp from "@/assets/dish-samp.jpg";
 import dishDessert from "@/assets/dish-dessert.jpg";
-import galleryBuffet from "@/assets/gallery-buffet.jpg";
-import galleryCorporate from "@/assets/gallery-corporate.jpg";
 import galleryKitchen from "@/assets/gallery-kitchen.jpg";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -109,15 +117,16 @@ const dishes = [
 ];
 
 const gallery = [
-  { src: galleryBuffet, cat: "Buffets", tall: true },
-  { src: galleryCorporate, cat: "Corporate", tall: false },
-  { src: dishGrill, cat: "Traditional Events", tall: true },
-  { src: galleryKitchen, cat: "Kitchen Moments", tall: false },
-  { src: dishPap, cat: "Plated Meals", tall: true },
-  { src: dishDessert, cat: "Desserts", tall: false },
-  { src: dishSamp, cat: "Food Styling", tall: false },
-  { src: dishBeef, cat: "Private Dining", tall: true },
+  { src: poolsideAsset.url, cat: "Poolside Buffets", tall: true },
+  { src: kitchenSpreadAsset.url, cat: "Kitchen Moments", tall: false },
+  { src: braaiAsset.url, cat: "Grill & Braai", tall: true },
+  { src: sundayLunchAsset.url, cat: "Sunday Lunch", tall: false },
+  { src: salmonPlatedAsset.url, cat: "Plated Meals", tall: true },
+  { src: salmonCitrusAsset.url, cat: "Starters", tall: false },
+  { src: waffleAsset.url, cat: "Food Styling", tall: false },
+  { src: hotdogsAsset.url, cat: "Street Food", tall: true },
 ];
+
 
 const testimonials = [
   {
@@ -197,13 +206,16 @@ function Home() {
     <SiteLayout>
       {/* HERO */}
       <section className="relative flex min-h-[100svh] items-end overflow-hidden">
-        <img
-          src={hero}
-          alt="Plated traditional South African cuisine by Khat Kooks"
-          width={1920}
-          height={1280}
-          fetchPriority="high"
-          className="ken-burns absolute inset-0 size-full object-cover"
+        <video
+          src={heroVideoAsset.url}
+          poster={heroPosterAsset.url}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-label="Khat Kooks catering in motion"
+          className="absolute inset-0 size-full object-cover"
         />
         <div className="absolute inset-0 hero-veil" />
         <div className="pointer-events-none absolute inset-x-0 bottom-1/3 mx-auto flex max-w-xs justify-between opacity-60">
@@ -273,7 +285,7 @@ function Home() {
           <Reveal delay={120} className="order-1 lg:order-2">
             <div className="relative overflow-hidden rounded-3xl shadow-soft">
               <img
-                src={lisa}
+                src={founderAsset.url}
                 alt="Lisa Khatshiwe, founder and head chef of Khat Kooks"
                 width={1024}
                 height={1280}
