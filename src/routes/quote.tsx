@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Check, Upload } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal } from "@/components/site/Reveal";
+import {
+  FORMSPREE_ENDPOINT,
+  MIN_FILL_SECONDS,
+  checkRateLimit,
+  recordSubmission,
+} from "@/lib/forms";
 
 export const Route = createFileRoute("/quote")({
   head: () => ({
