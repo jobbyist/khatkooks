@@ -282,7 +282,7 @@ function Home() {
           <Reveal delay={120} className="order-1 lg:order-2">
             <div className="relative overflow-hidden rounded-3xl shadow-soft">
               <img
-                src={lisa}
+                src={founderAsset.url}
                 alt="Lisa Khatshiwe, founder and head chef of Khat Kooks"
                 width={1024}
                 height={1280}
