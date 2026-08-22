@@ -206,13 +206,16 @@ function Home() {
     <SiteLayout>
       {/* HERO */}
       <section className="relative flex min-h-[100svh] items-end overflow-hidden">
-        <img
-          src={hero}
-          alt="Plated traditional South African cuisine by Khat Kooks"
-          width={1920}
-          height={1280}
-          fetchPriority="high"
-          className="ken-burns absolute inset-0 size-full object-cover"
+        <video
+          src={heroVideoAsset.url}
+          poster={heroPosterAsset.url}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          aria-label="Khat Kooks catering in motion"
+          className="absolute inset-0 size-full object-cover"
         />
         <div className="absolute inset-0 hero-veil" />
         <div className="pointer-events-none absolute inset-x-0 bottom-1/3 mx-auto flex max-w-xs justify-between opacity-60">
