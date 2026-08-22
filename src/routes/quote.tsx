@@ -387,6 +387,29 @@ function QuotePage() {
                     </select>
                   </div>
 
+                  {/* Honeypot — hidden from humans, catches bots */}
+                  <div aria-hidden className="absolute left-[-9999px] size-px overflow-hidden">
+                    <label htmlFor="company">Company (leave blank)</label>
+                    <input id="company" name="company" tabIndex={-1} autoComplete="off" />
+                  </div>
+
+                  <div>
+                    <Label htmlFor="mathAnswer">
+                      Spam check — what is {math.a} + {math.b}?
+                    </Label>
+                    <input
+                      id="mathAnswer"
+                      name="mathAnswer"
+                      inputMode="numeric"
+                      autoComplete="off"
+                      className={fieldClass}
+                      placeholder="Your answer"
+                    />
+                    {errors["mathAnswer"] && (
+                      <p className="mt-1.5 text-xs text-destructive">{errors["mathAnswer"]}</p>
+                    )}
+                  </div>
+
                   <label className="flex items-start gap-3 text-sm text-muted-foreground">
                     <input
                       type="checkbox"
@@ -397,12 +420,20 @@ function QuotePage() {
                   </label>
                   {errors["consent"] && <p className="text-xs text-destructive">{errors["consent"]}</p>}
 
+                  {formError && (
+                    <p className="rounded-2xl bg-secondary px-4 py-3 text-xs text-destructive">
+                      {formError}
+                    </p>
+                  )}
+
                   <button
                     type="submit"
-                    className="flex w-full items-center justify-center gap-2 rounded-full gradient-warm px-8 py-5 text-sm font-semibold text-background shadow-lift transition-transform duration-300 hover:-translate-y-1"
+                    disabled={sending}
+                    className="flex w-full items-center justify-center gap-2 rounded-full gradient-warm px-8 py-5 text-sm font-semibold text-background shadow-lift transition-transform duration-300 hover:-translate-y-1 disabled:opacity-60"
                   >
-                    <Check className="size-4" /> Request My Quote
+                    <Check className="size-4" /> {sending ? "Sending…" : "Request My Quote"}
                   </button>
+
                 </form>
               </Reveal>
             </>
