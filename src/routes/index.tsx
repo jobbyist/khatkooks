@@ -23,7 +23,6 @@ import { Reveal } from "@/components/site/Reveal";
 
 import heroVideoNew from "@/assets/hero-video-new.mp4";
 import heroPosterAsset from "@/assets/hero-poster.jpg.asset.json";
-import founderAsset from "@/assets/founder-lisa.jpg.asset.json";
 import hotdogsAsset from "@/assets/gourmet-hotdogs.jpg.asset.json";
 import salmonCitrusAsset from "@/assets/salmon-citrus.jpg.asset.json";
 import braaiAsset from "@/assets/braai-platter.jpg.asset.json";
@@ -261,7 +260,7 @@ function Index() {
         <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-2 lg:gap-20">
           <Reveal>
             <img
-              src={founderAsset.url}
+              src="https://github.com/user-attachments/assets/d457458e-3eff-4bb1-a082-fa88240dc233"
               alt="Lisa Kombanie, founder of Khat Kooks"
               className="aspect-[4/5] w-full rounded-4xl object-cover shadow-lift"
             />
