@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Instagram, Mail } from "lucide-react";
+import { Instagram, Mail, MessageCircle } from "lucide-react";
 
 export function Footer() {
   return (
@@ -15,7 +15,7 @@ export function Footer() {
             className="h-16 w-auto"
           />
           <p className="mt-6 max-w-sm font-display text-2xl leading-snug">
-            Authentic African cuisine, crafted with passion — for the tables that matter most.
+            Modern experimental cuisine, crafted with innovation — for the tables that matter most.
           </p>
         </div>
 
@@ -86,7 +86,16 @@ export function Footer() {
                 <Instagram className="size-4" /> @lisa.khat
               </a>
             </li>
-            <li className="text-background/55">WhatsApp — coming soon</li>
+            <li>
+              <a
+                href="https://wa.me/+27659730551"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 transition-colors hover:text-gold"
+              >
+                <MessageCircle className="size-4" /> WhatsApp
+              </a>
+            </li>
           </ul>
         </div>
       </div>

@@ -43,20 +43,20 @@ import galleryKitchen from "@/assets/gallery-kitchen.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Khat Kooks | Premium Catering & Authentic African Cuisine" },
+      { title: "Khat Kooks | Premium Catering & Modern Experimental Cuisine" },
       {
         name: "description",
         content:
-          "Khat Kooks offers premium catering and authentic South African cuisine for weddings, corporate events and private functions. Request a personalised quote today.",
+          "Khat Kooks offers premium catering and modern experimental cuisine for weddings, corporate events and private functions. Request a personalised quote today.",
       },
       {
         property: "og:title",
-        content: "Khat Kooks | Premium Catering & Authentic African Cuisine",
+        content: "Khat Kooks | Premium Catering & Modern Experimental Cuisine",
       },
       {
         property: "og:description",
         content:
-          "Khat Kooks offers premium catering and authentic South African cuisine for weddings, corporate events and private functions. Request a personalised quote today.",
+          "Khat Kooks offers premium catering and modern experimental cuisine for weddings, corporate events and private functions. Request a personalised quote today.",
       },
       { property: "og:type", content: "website" },
     ],
@@ -67,7 +67,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "FoodEstablishment",
           name: "Khat Kooks",
-          servesCuisine: "South African",
+          servesCuisine: "Modern Experimental",
           founder: { "@type": "Person", name: "Lisa Khatshiwe" },
           email: "info@khatkooks.food",
           areaServed: "Johannesburg, South Africa",
@@ -83,22 +83,22 @@ const services = [
   {
     icon: CalendarHeart,
     title: "Event Catering",
-    copy: "Weddings, birthdays, traditional celebrations, funerals, corporate functions and private events — catered with warmth and precision.",
+    copy: "Weddings, birthdays, celebrations, corporate functions and private events — catered with creativity and precision.",
   },
   {
     icon: Soup,
     title: "Meal Preparation",
-    copy: "Family meals, weekly meal plans and custom menus prepared fresh, so every table feels like home.",
+    copy: "Bespoke meal plans and innovative menus prepared fresh, transforming everyday dining into culinary experiences.",
   },
   {
     icon: Building2,
     title: "Corporate Catering",
-    copy: "Business lunches, office functions, boardroom catering and conferences delivered on time, every time.",
+    copy: "Business lunches, office functions, boardroom catering and conferences with cutting-edge culinary artistry.",
   },
   {
     icon: UtensilsCrossed,
-    title: "Traditional Cuisine",
-    copy: "Authentic South African dishes, regional specialities and seasonal menus rooted in heritage.",
+    title: "Contemporary Fusion",
+    copy: "Bold flavor combinations, innovative techniques and seasonal menus that push culinary boundaries.",
   },
   {
     icon: ChefHat,
@@ -118,14 +118,14 @@ const dishes = [
 
 const gallery = [
   { src: poolsideAsset.url, cat: "Poolside Buffets", tall: true },
-  { src: kitchenSpreadAsset.url, cat: "Kitchen Moments", tall: false },
-  { src: braaiAsset.url, cat: "Grill & Braai", tall: true },
-  { src: sundayLunchAsset.url, cat: "Sunday Lunch", tall: false },
-  { src: salmonPlatedAsset.url, cat: "Plated Meals", tall: true },
-  { src: salmonCitrusAsset.url, cat: "Starters", tall: false },
-  { src: waffleAsset.url, cat: "Food Styling", tall: false },
-  { src: hotdogsAsset.url, cat: "Street Food", tall: true },
-];
+  { src: "https://github.com/user-attachments/assets/0d65e638-cf91-4e47-845b-c8df55e47b1f", cat: "Culinary Art", tall: true },
+  { src: "https://github.com/user-attachments/assets/6c980068-ab1d-474d-8b1e-68961c1bee75", cat: "Modern Plating", tall: false },
+  { src: "https://github.com/user-attachments/assets/bb6c8149-d6d1-419a-9907-094afff70130", cat: "Experimental Cuisine", tall: true },
+  { src: "https://github.com/user-attachments/assets/61afd760-16aa-4830-919e-1b185c7989aa", cat: "Fine Dining", tall: false },
+  { src: "https://github.com/user-attachments/assets/a5a912bb-7576-490d-bba0-fbf8a0a32fb4", cat: "Contemporary Fusion", tall: true },
+  { src: "https://github.com/user-attachments/assets/9f47dbc1-9bc7-4d86-b4e3-5e1ea196063f", cat: "Innovative Concepts", tall: false },
+  { src: "https://github.com/user-attachments/assets/5ac9d2d1-bd79-40ea-8e29-75f94d3c635e", cat: "Artistic Presentation", tall: false },
+  { src: "https://github.com/user-attachments/assets/38fe6593-dff1-468f-9e63-781a1ea8f7ab", cat: "Avant-Garde Dishes", tall: true },
 
 
 const testimonials = [
@@ -135,14 +135,14 @@ const testimonials = [
     location: "Sandton, Johannesburg",
     quote:
       "Every single guest asked who catered. The food tasted like a family kitchen but was plated like a fine-dining restaurant.",
-  },
+      "Every single guest asked who catered. The presentation was stunning and the flavors were unlike anything we've experienced.",
   {
     name: "Thabo R.",
     event: "Corporate Conference",
     location: "Rosebank",
     quote:
       "Faultless service and timing. Khat Kooks handled 250 covers over two days without a single hiccup.",
-  },
+      "Exceptional service and innovative cuisine. Khat Kooks delivered a memorable culinary experience that impressed all our international guests.",
   {
     name: "Zanele K.",
     event: "Traditional Celebration",
@@ -155,7 +155,7 @@ const testimonials = [
 const why = [
   { icon: Leaf, label: "Fresh Ingredients" },
   { icon: ScrollText, label: "Authentic Recipes" },
-  { icon: ShieldCheck, label: "Professional Service" },
+  { icon: ScrollText, label: "Innovative Techniques" },
   { icon: UtensilsCrossed, label: "Flexible Menus" },
   { icon: Wallet, label: "Affordable Luxury" },
   { icon: Truck, label: "Reliable Delivery" },
@@ -228,11 +228,11 @@ function Home() {
           <Reveal>
             <p className="eyebrow text-gold">Khat Kooks · South Africa</p>
             <h1 className="mt-5 max-w-4xl font-display text-[clamp(2.6rem,7vw,5.5rem)] font-medium leading-[1.03] text-background">
-              Authentic African Cuisine, Crafted With Passion.
+              Modern Experimental Cuisine, Crafted With Innovation.
             </h1>
             <p className="mt-6 max-w-xl text-base leading-relaxed text-background/80 lg:text-lg">
-              From intimate family celebrations to corporate events, Khat Kooks creates
-              unforgettable dining experiences inspired by home, heritage and flavour.
+              From intimate celebrations to corporate events, Khat Kooks creates
+              unforgettable dining experiences inspired by innovation, artistry and bold flavors.
             </p>
             <div className="mt-9 flex flex-wrap gap-3">
               <Link
@@ -259,21 +259,21 @@ function Home() {
           <Reveal className="order-2 lg:order-1">
             <p className="eyebrow">The Founder</p>
             <h2 className="mt-4 font-display text-[clamp(2rem,4.6vw,3.5rem)] leading-[1.08]">
-              Lisa Khatshiwe cooks the way she was raised — generously.
+              Lisa Khatshiwe creates cuisine with vision and artistry.
             </h2>
             <div className="mt-7 space-y-5 text-[15px] leading-relaxed text-muted-foreground lg:text-base">
               <p>
-                Khat Kooks began in a family kitchen, where Sunday pots simmered all afternoon and
-                nobody left hungry. Lisa grew up learning that food is how you say welcome, thank
-                you, and I love you — without needing the words.
+                Khat Kooks was born from a passion for pushing culinary boundaries. Lisa developed her
+                craft by exploring global techniques, experimenting with unexpected flavor combinations,
+                and reimagining what modern catering can be.
               </p>
               <p>
-                Today she brings that same warmth to weddings, boardrooms and private homes across
-                South Africa. Every menu is handcrafted, every ingredient chosen personally, and
-                every recipe carries the heritage it came from — refined, never diluted.
+                Today she brings bold creativity to weddings, boardrooms and private events across
+                South Africa. Every menu is meticulously crafted, every ingredient sourced for quality,
+                and every dish designed to surprise and delight.
               </p>
               <p>
-                Her promise is simple: food that tastes like home, presented like an occasion.
+                Her promise is simple: innovative cuisine that elevates every occasion.
               </p>
             </div>
             <p className="mt-8 font-display text-2xl text-accent">Lisa Khatshiwe</p>
@@ -303,7 +303,7 @@ function Home() {
           <Reveal className="max-w-2xl">
             <p className="eyebrow">What We Do</p>
             <h2 className="mt-4 font-display text-[clamp(2rem,4.6vw,3.5rem)] leading-[1.08]">
-              Catering shaped around your occasion.
+              Contemporary catering shaped around your vision.
             </h2>
           </Reveal>
 
@@ -335,53 +335,14 @@ function Home() {
       </section>
 
       {/* FEATURED DISHES */}
-      <section className="px-5 py-24 lg:px-10 lg:py-36">
-        <div className="mx-auto max-w-7xl">
-          <Reveal className="max-w-2xl">
-            <p className="eyebrow">Featured Dishes</p>
-            <h2 className="mt-4 font-display text-[clamp(2rem,4.6vw,3.5rem)] leading-[1.08]">
-              Heritage plates, made with intent.
-            </h2>
-          </Reveal>
-
-          <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {dishes.map((d, i) => (
-              <Reveal key={d.title} delay={i * 70}>
-                <button
-                  type="button"
-                  onClick={() => setLightbox({ src: d.src, title: d.title })}
-                  className="group relative block w-full overflow-hidden rounded-3xl text-left shadow-soft"
-                >
-                  <img
-                    src={d.src}
-                    alt={d.title}
-                    width={1024}
-                    height={1024}
-                    loading="lazy"
-                    className="img-zoom aspect-[4/5] size-full object-cover"
-                  />
-                  <span className="absolute inset-0 hero-veil opacity-80" />
-                  <span className="absolute inset-x-6 bottom-6">
-                    <span className="block text-[11px] uppercase tracking-[0.28em] text-gold">
-                      {d.note}
-                    </span>
-                    <span className="mt-1 block font-display text-2xl text-background">
-                      {d.title}
-                    </span>
-                  </span>
-                </button>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Featured Dishes section hidden as per requirements */}
 
       {/* GALLERY */}
       <section id="gallery" className="scroll-mt-24 bg-charcoal px-5 py-24 lg:px-10 lg:py-36">
         <div className="mx-auto max-w-7xl">
           <Reveal className="max-w-2xl">
             <p className="eyebrow text-gold">Gallery</p>
-            <h2 className="mt-4 font-display text-[clamp(2rem,4.6vw,3.5rem)] leading-[1.08] text-background">
+              Our culinary creations.
               Moments from our tables.
             </h2>
           </Reveal>
@@ -419,7 +380,7 @@ function Home() {
           <Reveal className="max-w-2xl">
             <p className="eyebrow">Testimonials</p>
             <h2 className="mt-4 font-display text-[clamp(2rem,4.6vw,3.5rem)] leading-[1.08]">
-              Hosts who trusted us with the day.
+              Clients who experienced our vision.
             </h2>
           </Reveal>
 
@@ -461,7 +422,7 @@ function Home() {
           <Reveal className="max-w-2xl">
             <p className="eyebrow">Why Khat Kooks</p>
             <h2 className="mt-4 font-display text-[clamp(2rem,4.6vw,3.5rem)] leading-[1.08]">
-              Luxury you can taste, service you can rely on.
+              Innovation you can taste, service you can trust.
             </h2>
           </Reveal>
 
@@ -489,7 +450,7 @@ function Home() {
           <Reveal>
             <p className="eyebrow">The Process</p>
             <h2 className="mt-4 font-display text-[clamp(2rem,4.6vw,3.5rem)] leading-[1.08]">
-              From enquiry to the last plate served.
+              From concept to culinary experience.
             </h2>
           </Reveal>
 
@@ -541,10 +502,10 @@ function Home() {
           <Reveal>
             <Flame className="mx-auto size-7 text-background" />
             <h2 className="mt-6 font-display text-[clamp(2rem,4.4vw,3.4rem)] leading-[1.08] text-background">
-              Let's plan something unforgettable.
+              Let's create something extraordinary.
             </h2>
             <p className="mx-auto mt-5 max-w-xl text-background/85">
-              Share your date, guest count and taste — we'll come back with a personalised menu and
+              Share your vision, guest count and preferences — we'll create a bespoke menu and
               quotation.
             </p>
             <Link
