@@ -220,7 +220,7 @@ function Index() {
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/50 to-charcoal/80" />
         <div className="relative z-10 flex min-h-[92vh] flex-col justify-end px-5 pb-16 pt-32 lg:px-10 lg:pb-24">
           <Reveal>
-            <p className="eyebrow text-background/80">Premium Catering · Johannesburg</p>
+            <p className="eyebrow text-background/80">Premium Catering Services</p>
             <h1 className="mt-4 max-w-4xl font-display text-[clamp(2.6rem,7vw,5.2rem)] leading-[1.02] text-background">
               Food that feels like home,
               <br />
