@@ -74,7 +74,7 @@ const localBusinessJsonLd = {
   url: SITE_ORIGIN,
   image: DEFAULT_OG_IMAGE,
   email: "info@khatkooks.food",
-  telephone: "+27659730551",
+  telephone: "+27 659 730 551",
   founder: { "@type": "Person", name: "Lisa Kombanie" },
   address: {
     "@type": "PostalAddress",
