@@ -260,26 +260,29 @@ function Home() {
           <Reveal className="order-2 lg:order-1">
             <p className="eyebrow">The Founder</p>
             <h2 className="mt-4 font-display text-[clamp(2rem,4.6vw,3.5rem)] leading-[1.08]">
-              Lisa Khatshiwe creates cuisine with vision and artistry.
+              Lisa Kombanie creates cuisine with vision and artistry.
             </h2>
             <div className="mt-7 space-y-5 text-[15px] leading-relaxed text-muted-foreground lg:text-base">
               <p>
-                Khat Kooks was born from a passion for pushing culinary boundaries. Lisa developed her
-                craft by exploring global techniques, experimenting with unexpected flavor combinations,
-                and reimagining what modern catering can be.
+                I’m Lisa Khat, the creative behind Khat Kooks — a food and catering brand that was
+                born during a season of uncertainty, when I turned to something I’ve always loved:
+                cooking and creating.
               </p>
               <p>
-                Today she brings bold creativity to weddings, boardrooms and private events across
-                South Africa. Every menu is meticulously crafted, every ingredient sourced for quality,
-                and every dish designed to surprise and delight.
+                What started as a passion quickly became a space to experiment, share, and bring
+                people together through food.
               </p>
               <p>
-                Her promise is simple: innovative cuisine that elevates every occasion.
+                Today, Khat Kooks is all about taking familiar flavours and giving them a personal
+                twist, creating food that’s beautiful, memorable and made to be shared.
+              </p>
+              <p>
+                Khat Kooks — where creativity meets comfort, one delicious plate at a time.
               </p>
             </div>
-            <p className="mt-8 font-display text-2xl text-accent">Lisa Khatshiwe</p>
+            <p className="mt-8 font-display text-2xl text-accent">Lisa Kombanie</p>
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-              Founder & Head Chef
+              Founder &amp; Head Chef
             </p>
           </Reveal>
 
