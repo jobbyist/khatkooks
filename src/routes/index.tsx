@@ -127,7 +127,7 @@ const gallery = [
   { src: "https://github.com/user-attachments/assets/a5a912bb-7576-490d-bba0-fbf8a0a32fb4", cat: "Contemporary Fusion", tall: true },
   { src: "https://github.com/user-attachments/assets/9f47dbc1-9bc7-4d86-b4e3-5e1ea196063f", cat: "Innovative Concepts", tall: false },
   { src: "https://github.com/user-attachments/assets/5ac9d2d1-bd79-40ea-8e29-75f94d3c635e", cat: "Artistic Presentation", tall: false },
-  { src: "https://github.com/user-attachments/assets/38fe6593-dff1-468f-9e63-781a1ea8f7ab", cat: "Avant-Garde Dishes", tall: true },
+  { src: gallery1295Asset.url, cat: "Avant-Garde Dishes", tall: true },
 ];
 const testimonials = [
   {
