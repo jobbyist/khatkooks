@@ -126,8 +126,7 @@ const gallery = [
   { src: "https://github.com/user-attachments/assets/9f47dbc1-9bc7-4d86-b4e3-5e1ea196063f", cat: "Innovative Concepts", tall: false },
   { src: "https://github.com/user-attachments/assets/5ac9d2d1-bd79-40ea-8e29-75f94d3c635e", cat: "Artistic Presentation", tall: false },
   { src: "https://github.com/user-attachments/assets/38fe6593-dff1-468f-9e63-781a1ea8f7ab", cat: "Avant-Garde Dishes", tall: true },
-
-
+];
 const testimonials = [
   {
     name: "Naledi M.",
@@ -135,15 +134,15 @@ const testimonials = [
     location: "Sandton, Johannesburg",
     quote:
       "Every single guest asked who catered. The food tasted like a family kitchen but was plated like a fine-dining restaurant.",
-      "Every single guest asked who catered. The presentation was stunning and the flavors were unlike anything we've experienced.",
   {
+  },
     name: "Thabo R.",
     event: "Corporate Conference",
     location: "Rosebank",
     quote:
       "Faultless service and timing. Khat Kooks handled 250 covers over two days without a single hiccup.",
-      "Exceptional service and innovative cuisine. Khat Kooks delivered a memorable culinary experience that impressed all our international guests.",
   {
+  },
     name: "Zanele K.",
     event: "Traditional Celebration",
     location: "Soweto",
@@ -342,7 +341,7 @@ function Home() {
         <div className="mx-auto max-w-7xl">
           <Reveal className="max-w-2xl">
             <p className="eyebrow text-gold">Gallery</p>
-              Our culinary creations.
+            <h2 className="mt-4 font-display text-[clamp(2rem,4.6vw,3.5rem)] leading-[1.08] text-background">
               Moments from our tables.
             </h2>
           </Reveal>
