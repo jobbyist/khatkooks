@@ -417,7 +417,7 @@ function Home() {
                     <Star key={s} className="size-4 fill-current" />
                   ))}
                 </div>
-                <p className="mt-4 font-display text-lg leading-relaxed">“{t.quote}”</p>
+                <p className="mt-4 font-display text-lg leading-relaxed">{t.quote}</p>
               </Reveal>
             ))}
           </div>
