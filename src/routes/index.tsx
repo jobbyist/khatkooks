@@ -123,25 +123,22 @@ const gallery = [
 ];
 const testimonials = [
   {
-    name: "Naledi M.",
-    event: "Wedding — 180 guests",
-    location: "Sandton, Johannesburg",
+    name: "Balepi M.",
+    event: "Birthday Celebration",
     quote:
-      "Every single guest asked who catered. The food tasted like a family kitchen but was plated like a fine-dining restaurant.",
+      ""Everything was so good!" The food was honestly amazing and everyone kept coming back for seconds. Everything looked beautiful too. We were so happy with how everything turned out!",
   },
   {
-    name: "Thabo R.",
-    event: "Corporate Conference",
-    location: "Rosebank",
+    name: "Tari N.",
+    event: "Corporate Client",
     quote:
-      "Faultless service and timing. Khat Kooks handled 250 covers over two days without a single hiccup.",
+      "Such a pleasant experience. Khat Kooks really understood what we wanted and everything was ready for collection in time. The food was a hit and the service was great. We'll definitely be using them again!",
   },
   {
-    name: "Zanele K.",
-    event: "Traditional Celebration",
-    location: "Soweto",
+    name: "Lerato M.",
+    event: "Birthday Celebration",
     quote:
-      "Lisa understood exactly what our family wanted. The mogodu and samp were exactly like home — only better.",
+      "Would definitely use Khat Kooks again. The food was delicious and there was so much attention to detail. It made hosting so much easier knowing I didn't have to worry about the food. Everyone loved it!",
   },
 ];
 
@@ -368,10 +365,7 @@ function Index() {
                     <Star key={s} className="size-4 fill-current" />
                   ))}
                 </div>
-                <p className="mt-4 font-display text-lg leading-relaxed">“{t.quote}”</p>
-                <p className="mt-5 text-xs uppercase tracking-[0.2em] text-muted-foreground">
-                  {t.location}
-                </p>
+                <p className="mt-4 font-display text-lg leading-relaxed">{t.quote}</p>
               </Reveal>
             ))}
           </div>
