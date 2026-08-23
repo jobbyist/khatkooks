@@ -136,6 +136,8 @@ const gallery = [
   { src: "https://github.com/user-attachments/assets/9f47dbc1-9bc7-4d86-b4e3-5e1ea196063f", cat: "Innovative Concepts", tall: false },
   { src: "https://github.com/user-attachments/assets/5ac9d2d1-bd79-40ea-8e29-75f94d3c635e", cat: "Artistic Presentation", tall: false },
   { src: "https://github.com/user-attachments/assets/dfd05399-9789-4ed9-9511-e5f25427ac50", cat: "Avant-Garde Dishes", tall: true },
+  { src: "https://github.com/user-attachments/assets/d0b32927-f94d-49fd-b19e-a603fb66f131", cat: "Modern Cuisine", tall: false },
+  { src: "https://github.com/user-attachments/assets/25617ae4-9125-41da-97a4-9ce3c2939581", cat: "Culinary Excellence", tall: true },
 ];
 const testimonials = [
   {
@@ -216,7 +218,7 @@ function Home() {
       {/* HERO */}
       <section className="relative flex min-h-[100svh] items-end overflow-hidden">
         <video
-          src="https://github.com/user-attachments/assets/fbcada86-3b23-49bc-860c-af311cf87405"
+          src="https://github.com/user-attachments/assets/2e151af6-306e-486c-9147-c6d30b5586d7"
           poster={heroPosterAsset.url}
           autoPlay
           muted
