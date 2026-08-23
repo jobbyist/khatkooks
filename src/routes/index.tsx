@@ -170,7 +170,7 @@ const faqs = [
   },
   {
     q: "Do you accommodate dietary requirements?",
-    a: "Yes — vegetarian, vegan, halal, gluten-free and other needs are handled with care. Please note them on your quote request.",
+    a: "Yes — vegetarian, vegan, gluten-free and other needs are handled with care. Please note them on your quote request.",
   },
   {
     q: "Is delivery and setup included?",
