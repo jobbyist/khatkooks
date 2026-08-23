@@ -27,6 +27,7 @@ import founderAsset from "@/assets/founder-lisa.jpg.asset.json";
 import hotdogsAsset from "@/assets/gourmet-hotdogs.jpg.asset.json";
 import salmonCitrusAsset from "@/assets/salmon-citrus.jpg.asset.json";
 import braaiAsset from "@/assets/braai-platter.jpg.asset.json";
+import socialImageAsset from "@/assets/khat-kooks-social.jpg.asset.json";
 
 import gallery1293Asset from "@/assets/gallery-1293.jpg.asset.json";
 import gallery1295Asset from "@/assets/gallery-1295.jpg.asset.json";
@@ -41,6 +42,8 @@ import dishSamp from "@/assets/dish-samp.jpg";
 import dishDessert from "@/assets/dish-dessert.jpg";
 import galleryKitchen from "@/assets/gallery-kitchen.jpg";
 
+
+const SITE_ORIGIN = "https://khatkooks.lovable.app";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -61,7 +64,12 @@ export const Route = createFileRoute("/")({
           "Khat Kooks offers premium catering and modern experimental cuisine for weddings, corporate events and private functions. Request a personalised quote today.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:url", content: `${SITE_ORIGIN}/` },
+      { property: "og:image", content: `${SITE_ORIGIN}${socialImageAsset.url}` },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:image", content: `${SITE_ORIGIN}${socialImageAsset.url}` },
     ],
+    links: [{ rel: "canonical", href: `${SITE_ORIGIN}/` }],
     scripts: [
       {
         type: "application/ld+json",
@@ -260,7 +268,7 @@ function Home() {
           <Reveal className="order-2 lg:order-1">
             <p className="eyebrow">The Founder</p>
             <h2 className="mt-4 font-display text-[clamp(2rem,4.6vw,3.5rem)] leading-[1.08]">
-              Lisa Kombanie creates cuisine with vision and artistry.
+              Creating memorable cuisine experiences with vision and artistry.
             </h2>
             <div className="mt-7 space-y-5 text-[15px] leading-relaxed text-muted-foreground lg:text-base">
               <p>

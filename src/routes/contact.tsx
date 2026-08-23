@@ -87,12 +87,20 @@ function ContactPage() {
                 </Reveal>
               ))}
               <Reveal delay={280} className="sm:col-span-2">
-                <div className="rounded-3xl border border-dashed border-border p-7">
-                  <p className="text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
+                <a
+                  href="https://wa.me/+27659730551"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group block h-full rounded-3xl bg-card p-7 shadow-soft transition-transform duration-500 hover:-translate-y-1.5"
+                >
+                  <span className="flex size-11 items-center justify-center rounded-2xl bg-secondary text-accent transition-colors duration-500 group-hover:gradient-warm group-hover:text-background">
+                    <MessageCircle className="size-5" />
+                  </span>
+                  <p className="mt-5 text-[11px] uppercase tracking-[0.2em] text-muted-foreground">
                     WhatsApp
                   </p>
-                  <p className="mt-1 font-display text-xl">Coming soon</p>
-                </div>
+                  <p className="mt-1 font-display text-xl">065 973 0551</p>
+                </a>
               </Reveal>
             </div>
 

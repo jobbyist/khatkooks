@@ -274,7 +274,12 @@ function QuotePage() {
                     </div>
                     <div>
                       <Label htmlFor="eventDate">Event Date</Label>
-                      <input id="eventDate" name="eventDate" type="date" className={fieldClass} />
+                      <input
+                        id="eventDate"
+                        name="eventDate"
+                        type="date"
+                        className={`${fieldClass} max-w-[200px]`}
+                      />
                       {errors["eventDate"] && (
                         <p className="mt-1.5 text-xs text-destructive">{errors["eventDate"]}</p>
                       )}
