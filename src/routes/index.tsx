@@ -21,7 +21,7 @@ import {
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal } from "@/components/site/Reveal";
 
-import heroVideoAsset from "@/assets/hero-video.mp4.asset.json";
+import heroVideoNew from "@/assets/hero-video-new.mp4";
 import heroPosterAsset from "@/assets/hero-poster.jpg.asset.json";
 import founderAsset from "@/assets/founder-lisa.jpg.asset.json";
 import hotdogsAsset from "@/assets/gourmet-hotdogs.jpg.asset.json";
@@ -29,19 +29,16 @@ import salmonCitrusAsset from "@/assets/salmon-citrus.jpg.asset.json";
 import braaiAsset from "@/assets/braai-platter.jpg.asset.json";
 import socialImageAsset from "@/assets/khat-kooks-social.jpg.asset.json";
 
-import gallery1293Asset from "@/assets/gallery-1293.jpg.asset.json";
-import gallery1295Asset from "@/assets/gallery-1295.jpg.asset.json";
-import kitchenSpreadAsset from "@/assets/kitchen-spread.jpg.asset.json";
-import salmonPlatedAsset from "@/assets/salmon-plated.jpg.asset.json";
-import waffleAsset from "@/assets/chicken-waffles.jpg.asset.json";
-import sundayLunchAsset from "@/assets/sunday-lunch.jpg.asset.json";
-import dishPap from "@/assets/dish-pap.jpg";
-import dishBeef from "@/assets/dish-beef.jpg";
-import dishGrill from "@/assets/dish-grill.jpg";
-import dishSamp from "@/assets/dish-samp.jpg";
-import dishDessert from "@/assets/dish-dessert.jpg";
-import galleryKitchen from "@/assets/gallery-kitchen.jpg";
-
+import galleryNew01 from "@/assets/gallery-new-01.jpg";
+import galleryNew02 from "@/assets/gallery-new-02.jpg";
+import galleryNew03 from "@/assets/gallery-new-03.jpg";
+import galleryNew04 from "@/assets/gallery-new-04.jpg";
+import galleryNew05 from "@/assets/gallery-new-05.jpg";
+import galleryNew06 from "@/assets/gallery-new-06.jpg";
+import galleryNew07 from "@/assets/gallery-new-07.jpg";
+import galleryNew08 from "@/assets/gallery-new-08.jpg";
+import galleryNew09 from "@/assets/gallery-new-09.jpg";
+import galleryNew10 from "@/assets/gallery-new-10.jpg";
 
 const SITE_ORIGIN = "https://khatkooks.lovable.app";
 
@@ -107,26 +104,23 @@ const services = [
 ];
 
 const gallery = [
-  { src: gallery1293Asset.url, cat: "Plated Excellence", tall: false },
-  { src: gallery1295Asset.url, cat: "Signature Dishes", tall: true },
-  { src: kitchenSpreadAsset.url, cat: "Kitchen Craft", tall: false },
-  { src: salmonPlatedAsset.url, cat: "Fresh & Vibrant", tall: true },
-  { src: waffleAsset.url, cat: "Brunch Favourites", tall: false },
-  { src: sundayLunchAsset.url, cat: "Sunday Spreads", tall: true },
-  { src: dishPap, cat: "Comfort Classics", tall: false },
-  { src: dishBeef, cat: "Premium Proteins", tall: true },
-  { src: dishGrill, cat: "Braai & Grill", tall: false },
-  { src: dishSamp, cat: "Heritage Favourites", tall: true },
-  { src: dishDessert, cat: "Sweet Finales", tall: false },
-  { src: galleryKitchen, cat: "Behind the Scenes", tall: true },
-  { src: "https://github.com/user-attachments/assets/25617ae4-9125-41da-97a4-9ce3c2939581", cat: "Culinary Excellence", tall: true },
+  { src: galleryNew01, cat: "Signature Platters", tall: true },
+  { src: galleryNew02, cat: "Freshly Prepared", tall: true },
+  { src: galleryNew03, cat: "Chef's Selection", tall: true },
+  { src: galleryNew04, cat: "Beautifully Plated", tall: true },
+  { src: galleryNew05, cat: "Crafted With Care", tall: true },
+  { src: galleryNew06, cat: "Seasonal Favourites", tall: true },
+  { src: galleryNew07, cat: "Elegant Presentation", tall: true },
+  { src: galleryNew08, cat: "Made To Share", tall: true },
+  { src: galleryNew09, cat: "Event Spreads", tall: false },
+  { src: galleryNew10, cat: "Culinary Excellence", tall: false },
 ];
 const testimonials = [
   {
     name: "Balepi M.",
     event: "Birthday Celebration",
     quote:
-      ""Everything was so good!" The food was honestly amazing and everyone kept coming back for seconds. Everything looked beautiful too. We were so happy with how everything turned out!",
+      '"Everything was so good!" The food was honestly amazing and everyone kept coming back for seconds. Everything looked beautiful too. We were so happy with how everything turned out!',
   },
   {
     name: "Tari N.",
@@ -155,8 +149,16 @@ const why = [
 
 const process = [
   { step: "01", title: "Submit Quote Request", copy: "Tell us about your event in a few minutes." },
-  { step: "02", title: "Consultation", copy: "We call to understand your guests, taste and budget." },
-  { step: "03", title: "Custom Menu", copy: "A menu designed around your occasion and dietary needs." },
+  {
+    step: "02",
+    title: "Consultation",
+    copy: "We call to understand your guests, taste and budget.",
+  },
+  {
+    step: "03",
+    title: "Custom Menu",
+    copy: "A menu designed around your occasion and dietary needs.",
+  },
   { step: "04", title: "Quotation", copy: "A clear, itemised quote with no hidden extras." },
   { step: "05", title: "Confirmation", copy: "Date secured, menu locked, logistics planned." },
   { step: "06", title: "Event Delivery", copy: "We arrive, set up and serve — you simply host." },
@@ -200,7 +202,7 @@ function Index() {
           poster={heroPosterAsset.url}
           className="absolute inset-0 h-full w-full object-cover"
         >
-          <source src={heroVideoAsset.url} type="video/mp4" />
+          <source src={heroVideoNew} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-charcoal/70 via-charcoal/50 to-charcoal/80" />
         <div className="relative z-10 flex min-h-[92vh] flex-col justify-end px-5 pb-16 pt-32 lg:px-10 lg:pb-24">
@@ -223,10 +225,10 @@ function Index() {
                 Request a Quote
               </Link>
               <a
-                href="#menu"
+                href="#gallery"
                 className="rounded-full border border-background/40 bg-background/10 px-8 py-4 text-sm font-semibold text-background backdrop-blur-sm transition-colors hover:bg-background/20"
               >
-                Explore Menus
+                See Our Work
               </a>
             </div>
           </Reveal>
@@ -244,11 +246,7 @@ function Index() {
           </Reveal>
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {services.map((s, i) => (
-              <Reveal
-                key={s.title}
-                delay={i * 80}
-                className="rounded-3xl bg-card p-8 shadow-soft"
-              >
+              <Reveal key={s.title} delay={i * 80} className="rounded-3xl bg-card p-8 shadow-soft">
                 <s.icon className="size-8 text-accent" />
                 <h3 className="mt-5 font-display text-xl">{s.title}</h3>
                 <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{s.copy}</p>
@@ -264,7 +262,7 @@ function Index() {
           <Reveal>
             <img
               src={founderAsset.url}
-              alt="Lisa, founder of Khat Kooks"
+              alt="Lisa Kombanie, founder of Khat Kooks"
               className="aspect-[4/5] w-full rounded-4xl object-cover shadow-lift"
             />
           </Reveal>
@@ -274,21 +272,27 @@ function Index() {
               Born from a love of feeding people well.
             </h2>
             <p className="mt-6 leading-relaxed text-muted-foreground">
-              Khat Kooks began in a home kitchen with a simple belief: great food should feel
-              generous, personal and unforgettable. Today we bring that same spirit to weddings,
-              boardrooms and family tables across Johannesburg — combining traditional South African
-              flavours with modern technique and meticulous presentation.
+              I'm Lisa Khat, the creative behind Khat Kooks — a food and catering brand that was
+              born during a season of uncertainty, when I turned to something I've always loved:
+              cooking and creating.
             </p>
             <p className="mt-4 leading-relaxed text-muted-foreground">
-              Every menu is crafted with the guest in mind. We source thoughtfully, cook with care,
-              and deliver with the quiet confidence that lets you simply host.
+              What started as a passion quickly became a space to experiment, share, and bring
+              people together through food.
+            </p>
+            <p className="mt-4 leading-relaxed text-muted-foreground">
+              Today, Khat Kooks is all about taking familiar flavours and giving them a personal
+              twist, creating food that's beautiful, memorable and made to be shared.
+            </p>
+            <p className="mt-4 leading-relaxed text-muted-foreground">
+              Khat Kooks — where creativity meets comfort, one delicious plate at a time.
             </p>
             <div className="mt-8 flex items-center gap-4">
               <div className="flex size-14 items-center justify-center rounded-full bg-secondary">
                 <ChefHat className="size-6 text-accent" />
               </div>
               <div>
-                <p className="font-semibold">Lisa</p>
+                <p className="font-semibold">Lisa Kombanie</p>
                 <p className="text-sm text-muted-foreground">Founder & Head Chef</p>
               </div>
             </div>
@@ -307,11 +311,7 @@ function Index() {
           </Reveal>
           <div className="mt-14 columns-1 gap-4 sm:columns-2 lg:columns-3">
             {gallery.map((g, i) => (
-              <Reveal
-                key={i}
-                delay={i * 40}
-                className="mb-4 break-inside-avoid"
-              >
+              <Reveal key={i} delay={i * 40} className="mb-4 break-inside-avoid">
                 <button
                   type="button"
                   onClick={() => setLightbox({ src: g.src, title: g.cat })}
