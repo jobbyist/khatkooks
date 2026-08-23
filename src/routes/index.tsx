@@ -70,7 +70,7 @@ export const Route = createFileRoute("/")({
           "@type": "FoodEstablishment",
           name: "Khat Kooks",
           servesCuisine: "Modern Experimental",
-          founder: { "@type": "Person", name: "Lisa Khatshiwe" },
+          founder: { "@type": "Person", name: "Lisa Kombanie" },
           email: "info@khatkooks.food",
           areaServed: "Johannesburg, South Africa",
           sameAs: ["https://instagram.com/khatkooks", "https://instagram.com/lisa.khat"],
@@ -180,7 +180,7 @@ const faqs = [
   },
   {
     q: "Do you cater for dietary requirements?",
-    a: "Yes. Vegetarian, vegan, halaal-friendly, gluten-free and allergy-conscious menus are all available — just tell us in your quote request.",
+    a: "Yes. Vegetarian, vegan, gluten-free and allergy-conscious menus are all available — just tell us in your quote request.",
   },
   {
     q: "Do you travel?",
@@ -290,7 +290,7 @@ function Home() {
             <div className="relative overflow-hidden rounded-3xl shadow-soft">
               <img
                 src="https://github.com/user-attachments/assets/517e88d4-5e96-404a-abb6-f0ad8a6a475d"
-                alt="Lisa Khatshiwe, founder and head chef of Khat Kooks"
+                alt="Lisa Kombanie, founder and head chef of Khat Kooks"
                 width={1024}
                 height={1280}
                 loading="lazy"
