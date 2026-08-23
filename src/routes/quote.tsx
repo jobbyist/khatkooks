@@ -9,25 +9,16 @@ import {
   checkRateLimit,
   recordSubmission,
 } from "@/lib/forms";
+import { buildPageMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/quote")({
-  head: () => ({
-    meta: [
-      { title: "Request a Catering Quote | Khat Kooks" },
-      {
-        name: "description",
-        content:
-          "Request a personalised catering quotation from Khat Kooks for weddings, corporate functions, traditional celebrations and private dining in South Africa.",
-      },
-      { property: "og:title", content: "Request a Catering Quote | Khat Kooks" },
-      {
-        property: "og:description",
-        content:
-          "Tell us about your event and receive a custom menu and quotation from Khat Kooks.",
-      },
-      { property: "og:type", content: "website" },
-    ],
-  }),
+  head: () =>
+    buildPageMeta({
+      title: "Request a Catering Quote | Khat Kooks",
+      description:
+        "Request a personalised catering quotation from Khat Kooks for weddings, corporate functions, traditional celebrations and private dining in South Africa.",
+      path: "/quote",
+    }),
   component: QuotePage,
 });
 
