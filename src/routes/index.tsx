@@ -27,7 +27,9 @@ import founderAsset from "@/assets/founder-lisa.jpg.asset.json";
 import hotdogsAsset from "@/assets/gourmet-hotdogs.jpg.asset.json";
 import salmonCitrusAsset from "@/assets/salmon-citrus.jpg.asset.json";
 import braaiAsset from "@/assets/braai-platter.jpg.asset.json";
-import poolsideAsset from "@/assets/poolside-buffet.jpg.asset.json";
+
+import gallery1293Asset from "@/assets/gallery-1293.jpg.asset.json";
+import gallery1295Asset from "@/assets/gallery-1295.jpg.asset.json";
 import kitchenSpreadAsset from "@/assets/kitchen-spread.jpg.asset.json";
 import salmonPlatedAsset from "@/assets/salmon-plated.jpg.asset.json";
 import waffleAsset from "@/assets/chicken-waffles.jpg.asset.json";
@@ -68,7 +70,7 @@ export const Route = createFileRoute("/")({
           "@type": "FoodEstablishment",
           name: "Khat Kooks",
           servesCuisine: "Modern Experimental",
-          founder: { "@type": "Person", name: "Lisa Khatshiwe" },
+          founder: { "@type": "Person", name: "Lisa Kombanie" },
           email: "info@khatkooks.food",
           areaServed: "Johannesburg, South Africa",
           sameAs: ["https://instagram.com/khatkooks", "https://instagram.com/lisa.khat"],
@@ -117,7 +119,7 @@ const dishes = [
 ];
 
 const gallery = [
-  { src: poolsideAsset.url, cat: "Poolside Buffets", tall: true },
+  { src: gallery1293Asset.url, cat: "Poolside Buffets", tall: true },
   { src: "https://github.com/user-attachments/assets/0d65e638-cf91-4e47-845b-c8df55e47b1f", cat: "Culinary Art", tall: true },
   { src: "https://github.com/user-attachments/assets/6c980068-ab1d-474d-8b1e-68961c1bee75", cat: "Modern Plating", tall: false },
   { src: "https://github.com/user-attachments/assets/bb6c8149-d6d1-419a-9907-094afff70130", cat: "Experimental Cuisine", tall: true },
@@ -125,7 +127,7 @@ const gallery = [
   { src: "https://github.com/user-attachments/assets/a5a912bb-7576-490d-bba0-fbf8a0a32fb4", cat: "Contemporary Fusion", tall: true },
   { src: "https://github.com/user-attachments/assets/9f47dbc1-9bc7-4d86-b4e3-5e1ea196063f", cat: "Innovative Concepts", tall: false },
   { src: "https://github.com/user-attachments/assets/5ac9d2d1-bd79-40ea-8e29-75f94d3c635e", cat: "Artistic Presentation", tall: false },
-  { src: "https://github.com/user-attachments/assets/38fe6593-dff1-468f-9e63-781a1ea8f7ab", cat: "Avant-Garde Dishes", tall: true },
+  { src: gallery1295Asset.url, cat: "Avant-Garde Dishes", tall: true },
 ];
 const testimonials = [
   {
@@ -178,7 +180,7 @@ const faqs = [
   },
   {
     q: "Do you cater for dietary requirements?",
-    a: "Yes. Vegetarian, vegan, halaal-friendly, gluten-free and allergy-conscious menus are all available — just tell us in your quote request.",
+    a: "Yes. Vegetarian, vegan, gluten-free and allergy-conscious menus are all available — just tell us in your quote request.",
   },
   {
     q: "Do you travel?",
@@ -258,26 +260,29 @@ function Home() {
           <Reveal className="order-2 lg:order-1">
             <p className="eyebrow">The Founder</p>
             <h2 className="mt-4 font-display text-[clamp(2rem,4.6vw,3.5rem)] leading-[1.08]">
-              Lisa Khatshiwe creates cuisine with vision and artistry.
+              Lisa Kombanie creates cuisine with vision and artistry.
             </h2>
             <div className="mt-7 space-y-5 text-[15px] leading-relaxed text-muted-foreground lg:text-base">
               <p>
-                Khat Kooks was born from a passion for pushing culinary boundaries. Lisa developed her
-                craft by exploring global techniques, experimenting with unexpected flavor combinations,
-                and reimagining what modern catering can be.
+                I’m Lisa Khat, the creative behind Khat Kooks — a food and catering brand that was
+                born during a season of uncertainty, when I turned to something I’ve always loved:
+                cooking and creating.
               </p>
               <p>
-                Today she brings bold creativity to weddings, boardrooms and private events across
-                South Africa. Every menu is meticulously crafted, every ingredient sourced for quality,
-                and every dish designed to surprise and delight.
+                What started as a passion quickly became a space to experiment, share, and bring
+                people together through food.
               </p>
               <p>
-                Her promise is simple: innovative cuisine that elevates every occasion.
+                Today, Khat Kooks is all about taking familiar flavours and giving them a personal
+                twist, creating food that’s beautiful, memorable and made to be shared.
+              </p>
+              <p>
+                Khat Kooks — where creativity meets comfort, one delicious plate at a time.
               </p>
             </div>
-            <p className="mt-8 font-display text-2xl text-accent">Lisa Khatshiwe</p>
+            <p className="mt-8 font-display text-2xl text-accent">Lisa Kombanie</p>
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground">
-              Founder & Head Chef
+              Founder &amp; Head Chef
             </p>
           </Reveal>
 
@@ -285,7 +290,7 @@ function Home() {
             <div className="relative overflow-hidden rounded-3xl shadow-soft">
               <img
                 src="https://github.com/user-attachments/assets/517e88d4-5e96-404a-abb6-f0ad8a6a475d"
-                alt="Lisa Khatshiwe, founder and head chef of Khat Kooks"
+                alt="Lisa Kombanie, founder and head chef of Khat Kooks"
                 width={1024}
                 height={1280}
                 loading="lazy"

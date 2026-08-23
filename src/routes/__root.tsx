@@ -83,11 +83,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content:
           "Khat Kooks offers premium catering and authentic South African cuisine for weddings, corporate events and private functions. Request a personalised quote today.",
       },
-      { name: "author", content: "Lisa Khatshiwe" },
+      { name: "author", content: "Lisa Kombanie" },
       {
         name: "keywords",
         content:
-          "South African catering, African cuisine, traditional food catering, corporate catering, wedding catering, event catering, private chef, Johannesburg catering, Khat Kooks, Lisa Khatshiwe",
+          "South African catering, African cuisine, traditional food catering, corporate catering, wedding catering, event catering, private chef, Johannesburg catering, Khat Kooks, Lisa Kombanie",
       },
       { property: "og:site_name", content: "Khat Kooks" },
       { property: "og:type", content: "website" },

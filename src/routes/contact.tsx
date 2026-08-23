@@ -15,7 +15,7 @@ export const Route = createFileRoute("/contact")({
       { property: "og:title", content: "Contact Khat Kooks | Catering Enquiries" },
       {
         property: "og:description",
-        content: "Reach Lisa Khatshiwe and the Khat Kooks team for catering enquiries.",
+        content: "Reach Lisa Kombanie and the Khat Kooks team for catering enquiries.",
       },
       { property: "og:type", content: "website" },
     ],

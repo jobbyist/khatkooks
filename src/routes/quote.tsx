@@ -226,7 +226,7 @@ function QuotePage() {
                         id="surname"
                         name="surname"
                         className={fieldClass}
-                        placeholder="Khatshiwe"
+                        placeholder="Kombanie"
                       />
                       {errors["surname"] && (
                         <p className="mt-1.5 text-xs text-destructive">{errors["surname"]}</p>
