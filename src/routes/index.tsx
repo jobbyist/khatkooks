@@ -207,7 +207,7 @@ function Home() {
       {/* HERO */}
       <section className="relative flex min-h-[100svh] items-end overflow-hidden">
         <video
-          src={heroVideoAsset.url}
+          src="https://github.com/user-attachments/assets/fbcada86-3b23-49bc-860c-af311cf87405"
           poster={heroPosterAsset.url}
           autoPlay
           muted
@@ -285,7 +285,7 @@ function Home() {
           <Reveal delay={120} className="order-1 lg:order-2">
             <div className="relative overflow-hidden rounded-3xl shadow-soft">
               <img
-                src={founderAsset.url}
+                src="https://github.com/user-attachments/assets/517e88d4-5e96-404a-abb6-f0ad8a6a475d"
                 alt="Lisa Khatshiwe, founder and head chef of Khat Kooks"
                 width={1024}
                 height={1280}
