@@ -134,15 +134,15 @@ const testimonials = [
     location: "Sandton, Johannesburg",
     quote:
       "Every single guest asked who catered. The food tasted like a family kitchen but was plated like a fine-dining restaurant.",
-  {
   },
+  {
     name: "Thabo R.",
     event: "Corporate Conference",
     location: "Rosebank",
     quote:
       "Faultless service and timing. Khat Kooks handled 250 covers over two days without a single hiccup.",
-  {
   },
+  {
     name: "Zanele K.",
     event: "Traditional Celebration",
     location: "Soweto",
