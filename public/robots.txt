@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://khatkooks.lovable.app/sitemap.xml
+Sitemap: https://khatkooks.food/sitemap.xml

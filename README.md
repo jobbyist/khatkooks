@@ -682,7 +682,7 @@ The final result should feel like a premium hospitality brand—editorial, elega
 
 This project was built with [Lovable](https://lovable.dev).
 
-**Live app**: https://khatkooks.lovable.app
+**Live app**: https://khatkooks.food
 
 ## Build with Lovable
 
