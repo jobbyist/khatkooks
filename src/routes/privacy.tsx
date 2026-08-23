@@ -1,25 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
+import { buildPageMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/privacy")({
-  head: () => ({
-    meta: [
-      { title: "Privacy Policy | Khat Kooks Catering" },
-      {
-        name: "description",
-        content:
-          "How Khat Kooks collects, uses and protects the personal information you share when requesting a catering quote or contacting us.",
-      },
-      { property: "og:title", content: "Privacy Policy | Khat Kooks Catering" },
-      {
-        property: "og:description",
-        content:
-          "How Khat Kooks collects, uses and protects your personal information.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () =>
+    buildPageMeta({
+      title: "Privacy Policy | Khat Kooks Catering",
+      description:
+        "How Khat Kooks collects, uses and protects the personal information you share when requesting a catering quote or contacting us.",
+      path: "/privacy",
+    }),
   component: PrivacyPage,
 });
 

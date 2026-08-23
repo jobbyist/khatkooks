@@ -20,13 +20,13 @@ import {
 
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal } from "@/components/site/Reveal";
+import { SITE_ORIGIN, DEFAULT_OG_IMAGE, buildPageMeta } from "@/lib/seo";
 
 import heroVideoNew from "@/assets/hero-video-new.mp4";
 import heroPosterAsset from "@/assets/hero-poster.jpg.asset.json";
 import hotdogsAsset from "@/assets/gourmet-hotdogs.jpg.asset.json";
 import salmonCitrusAsset from "@/assets/salmon-citrus.jpg.asset.json";
 import braaiAsset from "@/assets/braai-platter.jpg.asset.json";
-import socialImageAsset from "@/assets/khat-kooks-social.jpg.asset.json";
 
 import galleryNew01 from "@/assets/gallery-new-01.jpg";
 import galleryNew02 from "@/assets/gallery-new-02.jpg";
@@ -39,42 +39,79 @@ import galleryNew08 from "@/assets/gallery-new-08.jpg";
 import galleryNew09 from "@/assets/gallery-new-09.jpg";
 import galleryNew10 from "@/assets/gallery-new-10.jpg";
 
-const SITE_ORIGIN = "https://khatkooks.lovable.app";
+const PAGE_TITLE = "Khat Kooks | Premium Catering & Modern Experimental Cuisine";
+const PAGE_DESCRIPTION =
+  "Khat Kooks offers premium catering and modern experimental cuisine for weddings, corporate events and private functions. Request a personalised quote today.";
+
+const faqs = [
+  {
+    q: "How far in advance should I book?",
+    a: "For weddings and large functions we recommend 6–8 weeks. Smaller events and family meals can often be arranged within 7 days, subject to availability.",
+  },
+  {
+    q: "Do you accommodate dietary requirements?",
+    a: "Yes — vegetarian, vegan, gluten-free and other needs are handled with care. Please note them on your quote request.",
+  },
+  {
+    q: "Is delivery and setup included?",
+    a: "Delivery and professional setup are included within Gauteng. Outside the province we can arrange logistics at an additional cost.",
+  },
+  {
+    q: "Can I taste the menu beforehand?",
+    a: "Tasting sessions are available for larger events. Details are shared once we begin menu planning.",
+  },
+  {
+    q: "What is the minimum order?",
+    a: "We cater from 10 guests upward. For smaller gatherings please get in touch — we often find a solution.",
+  },
+];
+
+const localBusinessJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FoodEstablishment",
+  name: "Khat Kooks",
+  description: PAGE_DESCRIPTION,
+  url: SITE_ORIGIN,
+  image: DEFAULT_OG_IMAGE,
+  email: "info@khatkooks.food",
+  telephone: "+27659730551",
+  founder: { "@type": "Person", name: "Lisa Kombanie" },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Johannesburg",
+    addressRegion: "Gauteng",
+    addressCountry: "ZA",
+  },
+  areaServed: {
+    "@type": "AdministrativeArea",
+    name: "Gauteng, South Africa",
+  },
+  servesCuisine: "South African, Modern Experimental",
+  priceRange: "$$",
+  sameAs: [
+    "https://instagram.com/khatkooks",
+    "https://instagram.com/lisa.khat",
+    "https://tiktok.com/@lisa.khat",
+  ],
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: faqs.map((f) => ({
+    "@type": "Question",
+    name: f.q,
+    acceptedAnswer: { "@type": "Answer", text: f.a },
+  })),
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
-    meta: [
-      { title: "Khat Kooks | Premium Catering & Modern Experimental Cuisine" },
-      {
-        name: "description",
-        content:
-          "Khat Kooks offers premium catering and modern experimental cuisine for weddings, corporate events and private functions. Request a personalised quote today.",
-      },
-      {
-        property: "og:title",
-        content: "Khat Kooks | Premium Catering & Modern Experimental Cuisine",
-      },
-      {
-        property: "og:description",
-        content:
-          "Khat Kooks offers premium catering and modern experimental cuisine for weddings, corporate events and private functions. Request a personalised quote today.",
-      },
-      { property: "og:type", content: "website" },
-      { property: "og:url", content: SITE_ORIGIN },
-      { property: "og:image", content: socialImageAsset.url },
-      { name: "twitter:card", content: "summary_large_image" },
-      {
-        name: "twitter:title",
-        content: "Khat Kooks | Premium Catering & Modern Experimental Cuisine",
-      },
-      {
-        name: "twitter:description",
-        content:
-          "Khat Kooks offers premium catering and modern experimental cuisine for weddings, corporate events and private functions. Request a personalised quote today.",
-      },
-      { name: "twitter:image", content: socialImageAsset.url },
+    ...buildPageMeta({ title: PAGE_TITLE, description: PAGE_DESCRIPTION, path: "/" }),
+    scripts: [
+      { type: "application/ld+json", children: JSON.stringify(localBusinessJsonLd) },
+      { type: "application/ld+json", children: JSON.stringify(faqJsonLd) },
     ],
-    links: [{ rel: "canonical", href: SITE_ORIGIN }],
   }),
   component: Index,
 });
@@ -161,29 +198,6 @@ const process = [
   { step: "04", title: "Quotation", copy: "A clear, itemised quote with no hidden extras." },
   { step: "05", title: "Confirmation", copy: "Date secured, menu locked, logistics planned." },
   { step: "06", title: "Event Delivery", copy: "We arrive, set up and serve — you simply host." },
-];
-
-const faqs = [
-  {
-    q: "How far in advance should I book?",
-    a: "For weddings and large functions we recommend 6–8 weeks. Smaller events and family meals can often be arranged within 7 days, subject to availability.",
-  },
-  {
-    q: "Do you accommodate dietary requirements?",
-    a: "Yes — vegetarian, vegan, gluten-free and other needs are handled with care. Please note them on your quote request.",
-  },
-  {
-    q: "Is delivery and setup included?",
-    a: "Delivery and professional setup are included within Gauteng. Outside the province we can arrange logistics at an additional cost.",
-  },
-  {
-    q: "Can I taste the menu beforehand?",
-    a: "Tasting sessions are available for larger events. Details are shared once we begin menu planning.",
-  },
-  {
-    q: "What is the minimum order?",
-    a: "We cater from 10 guests upward. For smaller gatherings please get in touch — we often find a solution.",
-  },
 ];
 
 function Index() {

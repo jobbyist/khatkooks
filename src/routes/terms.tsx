@@ -1,25 +1,15 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteLayout } from "@/components/site/SiteLayout";
+import { buildPageMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/terms")({
-  head: () => ({
-    meta: [
-      { title: "Terms of Service | Khat Kooks Catering" },
-      {
-        name: "description",
-        content:
-          "The terms that apply to quotations, bookings, payments, cancellations and catering services provided by Khat Kooks.",
-      },
-      { property: "og:title", content: "Terms of Service | Khat Kooks Catering" },
-      {
-        property: "og:description",
-        content:
-          "Terms covering quotations, bookings, payments and cancellations for Khat Kooks catering.",
-      },
-      { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary_large_image" },
-    ],
-  }),
+  head: () =>
+    buildPageMeta({
+      title: "Terms of Service | Khat Kooks Catering",
+      description:
+        "The terms that apply to quotations, bookings, payments, cancellations and catering services provided by Khat Kooks.",
+      path: "/terms",
+    }),
   component: TermsPage,
 });
 

@@ -2,24 +2,16 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Mail, Instagram, MapPin, MessageCircle } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal } from "@/components/site/Reveal";
+import { buildPageMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/contact")({
-  head: () => ({
-    meta: [
-      { title: "Contact Khat Kooks | Catering Enquiries" },
-      {
-        name: "description",
-        content:
-          "Get in touch with Khat Kooks for catering enquiries — email info@khatkooks.food or follow @khatkooks for menus, events and behind-the-scenes kitchen moments.",
-      },
-      { property: "og:title", content: "Contact Khat Kooks | Catering Enquiries" },
-      {
-        property: "og:description",
-        content: "Reach Lisa Kombanie and the Khat Kooks team for catering enquiries.",
-      },
-      { property: "og:type", content: "website" },
-    ],
-  }),
+  head: () =>
+    buildPageMeta({
+      title: "Contact Khat Kooks | Catering Enquiries",
+      description:
+        "Get in touch with Khat Kooks for catering enquiries — email info@khatkooks.food or follow @khatkooks for menus, events and behind-the-scenes kitchen moments.",
+      path: "/contact",
+    }),
   component: ContactPage,
 });
 
