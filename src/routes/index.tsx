@@ -119,7 +119,7 @@ const dishes = [
 ];
 
 const gallery = [
-  { src: poolsideAsset.url, cat: "Poolside Buffets", tall: true },
+  { src: gallery1293Asset.url, cat: "Poolside Buffets", tall: true },
   { src: "https://github.com/user-attachments/assets/0d65e638-cf91-4e47-845b-c8df55e47b1f", cat: "Culinary Art", tall: true },
   { src: "https://github.com/user-attachments/assets/6c980068-ab1d-474d-8b1e-68961c1bee75", cat: "Modern Plating", tall: false },
   { src: "https://github.com/user-attachments/assets/bb6c8149-d6d1-419a-9907-094afff70130", cat: "Experimental Cuisine", tall: true },
