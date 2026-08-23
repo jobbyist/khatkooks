@@ -1,7 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X, Instagram } from "lucide-react";
-import logoDark from "@/assets/logo-dark.png.asset.json";
 import { cn } from "@/lib/utils";
 
 const sectionLinks = [
@@ -36,7 +35,7 @@ export function Nav() {
       >
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
           <img
-            src={logoDark.url}
+            src="https://github.com/user-attachments/assets/546cc3e2-0d0b-468a-a991-a5bc08543cc0"
             alt="Khat Kooks"
             width={120}
             height={100}

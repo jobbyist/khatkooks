@@ -1,6 +1,5 @@
 import { Link } from "@tanstack/react-router";
 import { Instagram, Mail } from "lucide-react";
-import logoLight from "@/assets/logo-light.png.asset.json";
 
 export function Footer() {
   return (
@@ -8,7 +7,7 @@ export function Footer() {
       <div className="mx-auto grid max-w-7xl gap-12 px-5 py-16 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-10 lg:py-24">
         <div>
           <img
-            src={logoLight.url}
+            src="https://github.com/user-attachments/assets/2d0121a8-4fa3-4f63-8a22-20f4194ed540"
             alt="Khat Kooks"
             width={200}
             height={170}
