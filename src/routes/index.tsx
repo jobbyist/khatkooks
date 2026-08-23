@@ -127,7 +127,7 @@ const dishes = [
 ];
 
 const gallery = [
-  { src: gallery1293Asset.url, cat: "Poolside Buffets", tall: true },
+  { src: "https://github.com/user-attachments/assets/3d9bb17c-1f76-4595-927d-2af4bc882551", cat: "Poolside Buffets", tall: true },
   { src: "https://github.com/user-attachments/assets/0d65e638-cf91-4e47-845b-c8df55e47b1f", cat: "Culinary Art", tall: true },
   { src: "https://github.com/user-attachments/assets/6c980068-ab1d-474d-8b1e-68961c1bee75", cat: "Modern Plating", tall: false },
   { src: "https://github.com/user-attachments/assets/bb6c8149-d6d1-419a-9907-094afff70130", cat: "Experimental Cuisine", tall: true },
@@ -135,7 +135,7 @@ const gallery = [
   { src: "https://github.com/user-attachments/assets/a5a912bb-7576-490d-bba0-fbf8a0a32fb4", cat: "Contemporary Fusion", tall: true },
   { src: "https://github.com/user-attachments/assets/9f47dbc1-9bc7-4d86-b4e3-5e1ea196063f", cat: "Innovative Concepts", tall: false },
   { src: "https://github.com/user-attachments/assets/5ac9d2d1-bd79-40ea-8e29-75f94d3c635e", cat: "Artistic Presentation", tall: false },
-  { src: gallery1295Asset.url, cat: "Avant-Garde Dishes", tall: true },
+  { src: "https://github.com/user-attachments/assets/dfd05399-9789-4ed9-9511-e5f25427ac50", cat: "Avant-Garde Dishes", tall: true },
 ];
 const testimonials = [
   {
