@@ -1,4 +1,4 @@
-export const SITE_ORIGIN = "https://khatkooks.lovable.app";
+export const SITE_ORIGIN = "https://khatkooks.food";
 export const DEFAULT_OG_IMAGE = `${SITE_ORIGIN}/__l5e/assets-v1/cf40089c-628c-4074-8a3e-11b0f6a1dca9/khat-kooks-social.jpg`;
 
 type PageMetaOptions = {
