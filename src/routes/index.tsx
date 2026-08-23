@@ -28,6 +28,8 @@ import hotdogsAsset from "@/assets/gourmet-hotdogs.jpg.asset.json";
 import salmonCitrusAsset from "@/assets/salmon-citrus.jpg.asset.json";
 import braaiAsset from "@/assets/braai-platter.jpg.asset.json";
 import poolsideAsset from "@/assets/poolside-buffet.jpg.asset.json";
+import gallery1293Asset from "@/assets/gallery-1293.jpg.asset.json";
+import gallery1295Asset from "@/assets/gallery-1295.jpg.asset.json";
 import kitchenSpreadAsset from "@/assets/kitchen-spread.jpg.asset.json";
 import salmonPlatedAsset from "@/assets/salmon-plated.jpg.asset.json";
 import waffleAsset from "@/assets/chicken-waffles.jpg.asset.json";
