@@ -104,8 +104,12 @@ export function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-6 text-xs text-background/55 sm:flex-row sm:items-center sm:justify-between lg:px-10">
           <p>© {new Date().getFullYear()} Khat Kooks. All rights reserved.</p>
           <div className="flex gap-6">
-            <span>Privacy Policy</span>
-            <span>Terms</span>
+            <Link to="/privacy" className="transition-colors hover:text-gold">
+              Privacy Policy
+            </Link>
+            <Link to="/terms" className="transition-colors hover:text-gold">
+              Terms
+            </Link>
           </div>
         </div>
       </div>
