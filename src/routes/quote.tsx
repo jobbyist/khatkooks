@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Check, Upload } from "lucide-react";
+import { Check } from "lucide-react";
 import { SiteLayout } from "@/components/site/SiteLayout";
 import { Reveal } from "@/components/site/Reveal";
 import {
@@ -355,18 +355,6 @@ function QuotePage() {
                       className={fieldClass}
                       placeholder="Tell us about the occasion, venue and anything special you'd love on the menu."
                     />
-                  </div>
-
-                  <div>
-                    <Label htmlFor="file">Attachment (optional)</Label>
-                    <label
-                      htmlFor="file"
-                      className="flex cursor-pointer items-center gap-3 rounded-2xl border border-dashed border-input bg-background px-4 py-5 text-sm text-muted-foreground transition-colors hover:border-accent"
-                    >
-                      <Upload className="size-4 text-accent" />
-                      Upload a menu, moodboard or event brief
-                      <input id="file" name="file" type="file" className="sr-only" />
-                    </label>
                   </div>
 
                   <div>
