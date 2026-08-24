@@ -1,15 +1,12 @@
 /**
  * Formspree endpoint for the quote request form.
  *
- * Paste your endpoint here once you have it, e.g.
- *   export const FORMSPREE_ENDPOINT = "https://formspree.io/f/abcdwxyz";
- *
- * You can also set VITE_FORMSPREE_ENDPOINT as an environment variable instead.
- * While this is empty the form validates and shows a friendly notice rather
- * than attempting a submission.
+ * Defaults to the Khat Kooks Formspree form, but can be overridden by
+ * setting VITE_FORMSPREE_ENDPOINT as an environment variable.
  */
 export const FORMSPREE_ENDPOINT: string =
-  (import.meta.env["VITE_FORMSPREE_ENDPOINT"] as string | undefined) ?? "";
+  (import.meta.env["VITE_FORMSPREE_ENDPOINT"] as string | undefined) ??
+  "https://formspree.io/f/mbgreebq";
 
 /** Minimum seconds a genuine user needs to fill the form. */
 export const MIN_FILL_SECONDS = 5;
